@@ -8,9 +8,7 @@ check this project please visit this link:
 
 https://zhurui1322.github.io/Angular-Login-Register-message-project/#!/login
 
-![]({{site.baseurl}}/https://raw.githubusercontent.com/zhurui1322/Angular-Login-Register-message-project/master/screenshot_1.PNG)
 
-![]({{site.baseurl}}/https://raw.githubusercontent.com/zhurui1322/Angular-Login-Register-message-project/master/screenshot_2.PNG)
 ### Prerequisites
 You also can download it, but make sure you have to install node js
 
