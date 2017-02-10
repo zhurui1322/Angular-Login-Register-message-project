@@ -11,11 +11,15 @@ https://zhurui1322.github.io/Angular-Login-Register-message-project/#!/login
 
 ### Prerequisites
 You also can download it, but make sure you have to install node js
+
 Open node js command prompt
+
     cd to the file location
+    
     http-server
 
 open your web browser and enter
+
     localhost:8080
     
 ## Deployment
