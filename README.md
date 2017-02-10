@@ -1,6 +1,6 @@
 # Angular-Login-Register-message-project
-using Angular1.6 to implement a simple login-register-message system 
-all the data will store in your web browser local storage
+Use Angular1.6 to implement a simple login-register-message system 
+all the data will store in your web browser local storage.
 
 
 ## Getting Started
@@ -24,7 +24,7 @@ open your web browser and enter
     
 ## Deployment
 Used AngularJS 1.6 to implement a simple login register message system
-also with HTML CSS Bootstrap
+also with HTML CSS Bootstrap.
 
 Modules include: 
 1.login
@@ -33,7 +33,7 @@ Modules include:
 4.display message
 5.message detail and comments
 
-The initial message data read from simple JSON file, once read it, all the messages and comments will be saved in the local storage of your web browser.
+The initial message data read from simple JSON file, once read it, all the user, messages and comments will be saved in the local storage of your web browser.
  
  
 
