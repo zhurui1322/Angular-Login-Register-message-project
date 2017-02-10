@@ -1,0 +1,74 @@
+<h1>Hi {{vm.user.firstname}}!</h1>
+<p>Message Detail</p>
+<a href="#!/" class="btn btn-primary">Home</a>
+<a href="#!/message" class="btn btn-primary">Message List</a>
+<a href="#!/login" class="btn btn-primary" style="float:right">Logout</a>
+
+<br /><br />
+<br />
+<h4>Message</h4>
+<br />
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Image</th>
+			<th>Recipient</th>
+			<th>Image</th>
+			<th>Sender</th>
+			<th>Title</th>
+			<th>Date</th>
+			<th>Important</th>
+			<th>Option</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="noselect">
+    		<td><img style="height:20px; width:20px" ng-src="{{vm.message.recipient_img}}" ></td>
+   		 	<td>{{vm.message.recipient}}</td>
+    		<td> <img style="height:20px; width:20px" ng-src="{{vm.message.sender_img}}" ></td>
+   		 	<td>{{vm.message.sender}}</td>
+    		<td>{{vm.message.title}}</td>
+    		<td>{{vm.message.created_at | date}}</td>
+    		<td>
+    			<input type="button" class="btn btn-primary" ng-click="decrease(vm.message)" ng-disabled="vm.message.important<2" value="-"/>
+    			{{vm.message.important}}
+    			<input type="button" class="btn btn-primary" ng-click="increase(vm.message)" ng-disabled="vm.message.important>8" value="+"/>
+    		</td>
+    		<td><input type="button" class="btn btn-primary" ng-click="delete(vm.message)" value="DELETE" /></td>
+		</tr>
+		<tr>
+			<td colspan='8'><p>Message:</p></td>
+		</tr>
+		<tr>
+			<td colspan='8' style="background-color: white">{{vm.message.description}}</td>
+		</tr>
+		<tr>
+			<td colspan='8'><p>Comments</p></td>
+		</tr>
+
+
+		<tr>
+			<th>Image</th>
+			<th>Sender</th>
+			<th colspan='5'>Content</th>
+			<th>Date</th>
+		</tr>
+
+		<tr ng-repeat="comment in vm.message.comments track by $index"">
+			<td><img style="height:20px; width:20px" ng-src="{{comment.sender_img}}" ></td>
+   		 	<td>{{comment.sender}}</td>
+   		 	<td colspan='5'>{{comment.content}}</td>
+   		 	<td>{{comment.created_at}}</td>
+
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<p>Add Your Comment</p>
+<form name="form" ng-submit="addComment()" role="form">
+ 	<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5" ng-model="myTextarea" required></textarea>	
+ 	<br />
+	<input type="submit" ng-disabled="!myTextarea" class="btn btn-primary" value="Comment" />
+</form>

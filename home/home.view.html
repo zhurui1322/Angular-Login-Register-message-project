@@ -1,0 +1,65 @@
+﻿<h1>Hi {{vm.user.firstname}}!</h1>
+<img style="height:120px; width:120px; float:center" ng-src = "{{vm.user.avatar}}" >
+<p>You're logged in!!</p>
+
+<a href="#!/message" class="btn btn-primary">Message</a>
+<a href="#!/login" class="btn btn-primary" style="float:right">Logout</a>
+<h3>Your detail information:</h3>
+
+<br /><br />
+
+<table class="table table-hover">
+	<tbody>
+		<tr>
+			<th>Username</th>
+			<td><input type="text" name="username" id="username" ng-model="vm.user.username" required/></td>
+		</tr>
+
+		<tr>
+			<th>Password</th>
+			<td><input type="text" name="password" id="password" ng-model="vm.user.password" required/></td>
+		</tr>
+
+		<tr>
+			<th>Firstname</th>
+			<td><input type="text" name="firstname" id="firstname" ng-model="vm.user.firstname" required/></td>
+		</tr>
+
+		<tr>
+			<th>Lastname</th>
+			<td><input type="text" name="lastname" id="lastname" ng-model="vm.user.lastname" required/></td>
+		</tr>
+
+		<tr>
+			<th>Email</th>
+			<td><input type="email" name="email" id="email" ng-model="vm.user.email" required /></td>
+		</tr>
+
+		<tr>
+			<th>Phone</th>
+			<td><input type="number" name="phone" id="phone" ng-model="vm.user.phone" required/></td>
+		</tr>
+
+		<tr>
+			<th>Location</th>
+			<td><input type="text" name="location" id="location" ng-model="vm.user.location" required/></td>
+			
+		</tr>
+		<tr>
+			<th>Avatar</th>
+			<td><input type="text" name="avatar" id="avatar" ng-model="vm.user.avatar" required/></td>
+			
+		</tr>
+		<br /><br />
+		<tr>
+			<td>You Can Update Your Information And Click Update Button</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<input type='button' ng-click= "updateInfo()" class="btn btn-primary" value='UPDATE'/>
+
+
+
+<!--<td id="edit_info_6"><input type='button' class="btn btn-primary" ng-click="" value='EDIT'/></td>
+			<td><input type='button' class="btn btn-primary" ng-click="" value='UPDATE'/></td>-->

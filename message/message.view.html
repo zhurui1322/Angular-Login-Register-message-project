@@ -1,0 +1,49 @@
+<h1>Hi {{vm.user.firstname}}!</h1>
+<p>Your Messages List</p>
+<a href="#!/" class="btn btn-primary">Home</a>
+<a href="#!/login" class="btn btn-primary" style="float:right">Logout</a>
+
+<br /><br />
+
+
+<br />
+<table class="table table-hover">
+	<thead>
+		<tr class="detail">
+			<th>Image</th>
+			<th ng-click="sortBy('Recipient')">Recipient</th>
+			<th>Image</th>
+			<th ng-click="sortBy('sender')">Sender</th>
+			<th ng-click="sortBy('title')">Title</th>
+			<th ng-click="sortBy('created_at')">Date</th>
+			<th ng-click="sortBy('important')">Important</th>
+			<th ng-click="sortBy('comments.length')">Reply</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="detail" ng-repeat="message in messages track by $index" ng-click="go(message)">
+			<td> <img style="height:20px; width:20px" ng-src="{{message.recipient_img}}" ></td>
+   		 	<td>{{message.recipient}}</td>
+    		<td> <img style="height:20px; width:20px" ng-src="{{message.sender_img}}" ></td>
+   		 	<td>{{message.sender}}</td>
+    		<td>{{message.title}}</td>
+    		<td>{{message.created_at | date}}</td>
+    		<td>{{message.important}}</td>
+    		<td><span class="badge">{{message.comments.length}}</span></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<br />
+<br />
+<p>New Message</p>
+<form name="form" ng-submit="addMessage()" role="form">
+	<input class="form-control" type="text" id="title" name="title" placeholder="Subject" ng-model="myTitle" required /><br />
+	<input class="form-control" type="text" id="recipient" name="recipient" placeholder="To" ng-model="myRecipient" required /><br />
+ 	<textarea class="form-control" id="message" name="message" placeholder="You Message" rows="5" ng-model="myMessage" required></textarea>	
+ 	<br />
+	<input type="submit" ng-disabled="!myMessage || !myTitle || !myRecipient" class="btn btn-primary" value="Submit" />
+</form>
