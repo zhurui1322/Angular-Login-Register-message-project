@@ -28,9 +28,13 @@ also with HTML CSS Bootstrap.
 
 Modules include: 
 1.login
+
 2.register
+
 3.user information edit
+
 4.display message
+
 5.message detail and comments
 
 The initial message data read from simple JSON file, once read it, all the user, messages and comments will be saved in the local storage of your web browser.
