@@ -1,5 +1,5 @@
 # Angular-Login-Register-message-project
-Use Angular1.6 to implement a simple login-register-message system 
+Use Angular1.6 to implement a simple (SPA)login-register-message system 
 all the data will store in your web browser local storage.
 
 
@@ -27,6 +27,7 @@ Used AngularJS 1.6 to implement a simple login register message system
 also with HTML CSS Bootstrap.
 
 Modules include: 
+
 1.login
 
 2.register
