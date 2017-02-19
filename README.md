@@ -22,7 +22,7 @@ open your web browser and enter
 
     localhost:8080
     
-## Deployment
+## Implemention
 Used AngularJS 1.6 to implement a simple login register message system
 also with HTML CSS Bootstrap.
 
